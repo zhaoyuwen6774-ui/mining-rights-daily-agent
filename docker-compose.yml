@@ -1,0 +1,58 @@
+x-agent-environment: &agent-environment
+  APP_MODE: ${APP_MODE:-fixture}
+  PROJECT_ROOT: /app
+  DATA_DIR: /app/data
+  CACHE_DIR: /app/data/cache
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  LME_PROVIDER_URL: ${LME_PROVIDER_URL:-}
+  LME_API_KEY: ${LME_API_KEY:-}
+  LLM_BASE_URL: ${LLM_BASE_URL:-}
+  LLM_API_KEY: ${LLM_API_KEY:-}
+  LLM_MODEL: ${LLM_MODEL:-}
+
+services:
+  agent:
+    image: mining-rights-agent:local
+    build:
+      context: .
+    environment: *agent-environment
+    volumes:
+      - ./output:/app/output
+    entrypoint: ["mining-daily-agent"]
+
+  mining-news-mcp:
+    image: mining-rights-agent:local
+    environment: *agent-environment
+    stdin_open: true
+    entrypoint: ["mining-news-mcp"]
+
+  mineral-pdf-mcp:
+    image: mining-rights-agent:local
+    environment: *agent-environment
+    stdin_open: true
+    entrypoint: ["mineral-pdf-mcp"]
+
+  lme-price-mcp:
+    image: mining-rights-agent:local
+    environment: *agent-environment
+    stdin_open: true
+    entrypoint: ["lme-price-mcp"]
+
+  test:
+    image: mining-rights-agent:local
+    build:
+      context: .
+    environment:
+      APP_MODE: fixture
+      PROJECT_ROOT: /app
+      DATA_DIR: /app/data
+      CACHE_DIR: /app/data/cache
+      LOG_LEVEL: WARNING
+    entrypoint: ["pytest"]
+    command:
+      [
+        "-q",
+        "--cov=mining_rights_agent",
+        "--cov-report=term-missing",
+        "--cov-fail-under=60",
+      ]

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "[Fixture] Pilbara lithium project publishes quarterly operating update",
+    "url": "https://example.com/fixtures/pilbara-quarterly-update",
+    "published_at": "2026-08-18T03:00:00Z",
+    "summary": "The synthetic update covers production, shipments and near-term project execution.",
+    "content": "This bundled fixture describes a quarterly operating update for the Pilbara lithium project. It is test data and must not be treated as a live disclosure.",
+    "source_name": "Bundled fixture",
+    "author": "Test fixture"
+  },
+  {
+    "title": "[Fixture] Western Australia reviews lithium infrastructure priorities",
+    "url": "https://example.com/fixtures/wa-lithium-infrastructure",
+    "published_at": "2026-08-17T05:30:00Z",
+    "summary": "The synthetic policy note discusses shared infrastructure and approval sequencing.",
+    "content": "This bundled fixture describes a fictional policy review concerning lithium infrastructure in Western Australia. It exists only for repeatable tests.",
+    "source_name": "Bundled fixture",
+    "author": "Test fixture"
+  },
+  {
+    "title": "[Fixture] Lithium supply-chain buyers focus on contract quality",
+    "url": "https://example.com/fixtures/lithium-contract-quality",
+    "published_at": "2026-08-16T08:15:00Z",
+    "summary": "The synthetic market item highlights product specification and counterparty risk.",
+    "content": "This bundled fixture discusses fictional lithium contract trends and counterparty risk. No statement in it is live market information.",
+    "source_name": "Bundled fixture",
+    "author": "Test fixture"
+  },
+  {
+    "title": "[Fixture] Copper smelter maintenance affects spot availability",
+    "url": "https://example.com/fixtures/copper-smelter-maintenance",
+    "published_at": "2026-08-18T01:00:00Z",
+    "summary": "The synthetic copper item covers maintenance and regional spot supply.",
+    "content": "This bundled fixture is synthetic copper news used for automated tests.",
+    "source_name": "Bundled fixture",
+    "author": "Test fixture"
+  }
+]

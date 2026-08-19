@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mining-rights-daily-agent"
+version = "0.1.0"
+description = "A three-server MCP agent that generates evidence-backed mining daily briefs."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "feedparser>=6.0.11,<7",
+  "httpx>=0.28.1,<1",
+  "mcp>=1.12,<2",
+  "pydantic>=2.11,<3",
+  "pydantic-settings>=2.10,<3",
+  "pymupdf>=1.26,<2",
+  "trafilatura>=2.0,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.17,<2",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.1,<2",
+  "pytest-cov>=6.2,<7",
+  "respx>=0.22,<1",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+mining-news-mcp = "mining_rights_agent.news.server:main"
+mineral-pdf-mcp = "mining_rights_agent.pdf.server:main"
+lme-price-mcp = "mining_rights_agent.price.server:main"
+mining-daily-agent = "mining_rights_agent.agent.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mining_rights_agent"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--strict-markers --strict-config"
+markers = [
+  "live: calls public internet services and is disabled by default",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "RUF"]
+ignore = ["RUF001", "UP046"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+packages = ["mining_rights_agent"]
+exclude = ["tests"]
+
+[[tool.mypy.overrides]]
+module = ["feedparser", "pymupdf"]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+source = ["mining_rights_agent"]

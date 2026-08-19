@@ -1,0 +1,12 @@
+[
+  {
+    "project": "Pilbara",
+    "aliases": ["Pilgangoora", "Pilbara Minerals", "皮尔巴拉"],
+    "title": "[Fixture] Pilbara Mineral Resource Statement",
+    "url": "fixture://pilbara-resource-statement",
+    "reporting_code": "JORC",
+    "published_at": "2026-06-30",
+    "fixture": true
+  }
+]
+

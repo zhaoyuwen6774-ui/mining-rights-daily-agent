@@ -1,0 +1,12 @@
+[
+  {"commodity":"copper","date":"2026-08-12","price":9870.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-copper","provider":"fixture"},
+  {"commodity":"copper","date":"2026-08-13","price":9915.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-copper","provider":"fixture"},
+  {"commodity":"copper","date":"2026-08-14","price":9898.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-copper","provider":"fixture"},
+  {"commodity":"copper","date":"2026-08-17","price":9952.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-copper","provider":"fixture"},
+  {"commodity":"copper","date":"2026-08-18","price":10020.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-copper","provider":"fixture"},
+  {"commodity":"zinc","date":"2026-08-12","price":2860.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-zinc","provider":"fixture"},
+  {"commodity":"zinc","date":"2026-08-18","price":2895.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-zinc","provider":"fixture"},
+  {"commodity":"nickel","date":"2026-08-12","price":16820.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-nickel","provider":"fixture"},
+  {"commodity":"nickel","date":"2026-08-18","price":17110.0,"currency":"USD","unit":"tonne","price_type":"LME official cash fixture","source_url":"fixture://lme-nickel","provider":"fixture"}
+]
+

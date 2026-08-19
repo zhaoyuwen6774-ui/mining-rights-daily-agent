@@ -1,0 +1,1 @@
+"""Mining news MCP server."""

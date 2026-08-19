@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "mining-news-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--env",
+        "APP_MODE=fixture",
+        "mining-rights-agent:local",
+        "mining-news-mcp"
+      ]
+    },
+    "mineral-pdf-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--env",
+        "APP_MODE=fixture",
+        "mining-rights-agent:local",
+        "mineral-pdf-mcp"
+      ]
+    },
+    "lme-price-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--env",
+        "APP_MODE=fixture",
+        "mining-rights-agent:local",
+        "lme-price-mcp"
+      ]
+    }
+  }
+}
+

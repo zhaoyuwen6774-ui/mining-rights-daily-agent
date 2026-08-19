@@ -1,0 +1,31 @@
+{
+  "fixture://pilbara-resource-statement": [
+    {
+      "classification": "Indicated",
+      "tonnage_mt": 120.0,
+      "grade_value": 1.25,
+      "grade_unit": "% Li2O",
+      "contained_metal": 1500000.0,
+      "metal_unit": "t",
+      "reporting_code": "JORC",
+      "source_url": "fixture://pilbara-resource-statement",
+      "source_page": 42,
+      "source_text": "Indicated 120.0 Mt at 1.25% Li2O containing 1,500 kt Li2O",
+      "confidence": 0.99
+    },
+    {
+      "classification": "Inferred",
+      "tonnage_mt": 80.0,
+      "grade_value": 1.1,
+      "grade_unit": "% Li2O",
+      "contained_metal": 880000.0,
+      "metal_unit": "t",
+      "reporting_code": "JORC",
+      "source_url": "fixture://pilbara-resource-statement",
+      "source_page": 42,
+      "source_text": "Inferred 80.0 Mt at 1.10% Li2O containing 880 kt Li2O",
+      "confidence": 0.99
+    }
+  ]
+}
+
